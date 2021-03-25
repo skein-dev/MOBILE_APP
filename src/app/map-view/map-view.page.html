@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'map_view' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="bg_color">
+    <div class="map">
+        <img src="assets/images/map.png">
+    </div>
+    <div class="near_you animate__animated animate__zoomIn" style="top: 17%; left: 26%;">
+        <img src="assets/images/ic_pin.png">
+    </div>
+    <div class="near_you animate__animated animate__zoomIn" style="top: 35%; left: 19%;">
+        <img src="assets/images/ic_pin.png">
+    </div>
+    <div class="near_you animate__animated animate__zoomIn" style="top: 25%; left: 78%;">
+        <img src="assets/images/ic_pin.png">
+    </div>
+    <div class="near_you animate__animated animate__zoomIn" style="top: 57%; left: 75%;">
+        <img src="assets/images/ic_pin.png">
+    </div>
+    <div class="near_you animate__animated animate__zoomIn" style="top: 70%; left: 33%;">
+        <img src="assets/images/ic_pin.png">
+    </div>
+
+    <div class="my_location animate__animated animate__zoomIn" style="top: 59%; left: 50%;"></div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp ">
+    <div class="profile_box d-flex" (click)="salon_profile()">
+        <div class="img_box center_img">
+            <img src="assets/images/1.png" class="crop_img">
+        </div>
+        <div class="text_box">
+            <h3 class="d-flex">
+                <span class="rating">
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                </span>
+                &nbsp;&nbsp;4.5
+            </h3>
+            <h2>Restro Salons</h2>
+            <h4 class="d-flex">
+                <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                <span> Center Park, City Tower, New York</span>
+            </h4>
+        </div>
+    </div>
+</ion-footer>

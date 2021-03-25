@@ -1,0 +1,547 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>{{'my_wallet' | translate}}</ion-title>
+    </ion-toolbar>
+    <div class="banner">
+        <h2>{{'available_amount' | translate}}</h2>
+        <h1>$ 268.50</h1>
+
+        <div class="btn_box">
+            <ion-row>
+                <ion-col size="6" class="animate__animated animate__flipInX">
+                    <ion-button size="large" shape="round" fill="outline" class="btn" (click)="send_to_bank()">{{'send_to_bank' | translate}}</ion-button>
+                </ion-col>
+
+                <ion-col size="6" class="animate__animated animate__flipInX">
+                    <ion-button size="large" shape="round" class="box-shadow btn bg-gradient">{{'add_money' | translate}}</ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="none">
+        <h2>{{'recent_transation' | translate}}</h2>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Wonder Spot <span class="end">-70.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">4 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-50.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">2 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Ultra Unisex <span class="end">-30.00</span></h3>
+                    <h4 class="d-flex">
+                        14 Jun, 10:22 pm
+                        <span class="end">3 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="money_added animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/ic_pin.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Money Added <span class="end">+200.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">Bank of New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-80.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">6 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Wonder Spot <span class="end">-70.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">4 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-50.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">2 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Ultra Unisex <span class="end">-30.00</span></h3>
+                    <h4 class="d-flex">
+                        14 Jun, 10:22 pm
+                        <span class="end">3 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="money_added animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/ic_pin.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Money Added <span class="end">+200.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">Bank of New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-80.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">6 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Wonder Spot <span class="end">-70.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">4 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-50.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">2 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Ultra Unisex <span class="end">-30.00</span></h3>
+                    <h4 class="d-flex">
+                        14 Jun, 10:22 pm
+                        <span class="end">3 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="money_added animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/ic_pin.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Money Added <span class="end">+200.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">Bank of New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-80.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">6 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Wonder Spot <span class="end">-70.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">4 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-50.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">2 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Ultra Unisex <span class="end">-30.00</span></h3>
+                    <h4 class="d-flex">
+                        14 Jun, 10:22 pm
+                        <span class="end">3 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="money_added animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/ic_pin.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Money Added <span class="end">+200.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">Bank of New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-80.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">6 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Wonder Spot <span class="end">-70.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">4 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-50.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">2 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Ultra Unisex <span class="end">-30.00</span></h3>
+                    <h4 class="d-flex">
+                        14 Jun, 10:22 pm
+                        <span class="end">3 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="money_added animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/ic_pin.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Money Added <span class="end">+200.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">Bank of New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-80.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">6 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Wonder Spot <span class="end">-70.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">4 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-50.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">2 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Ultra Unisex <span class="end">-30.00</span></h3>
+                    <h4 class="d-flex">
+                        14 Jun, 10:22 pm
+                        <span class="end">3 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="money_added animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/ic_pin.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Money Added <span class="end">+200.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">Bank of New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-80.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">6 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Wonder Spot <span class="end">-70.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">4 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-50.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">2 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Ultra Unisex <span class="end">-30.00</span></h3>
+                    <h4 class="d-flex">
+                        14 Jun, 10:22 pm
+                        <span class="end">3 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="money_added animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/ic_pin.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Money Added <span class="end">+200.00</span></h3>
+                    <h4 class="d-flex">
+                        22 Jun, 11:40 am
+                        <span class="end">Bank of New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">Opera City Salon <span class="end">-80.00</span></h3>
+                    <h4 class="d-flex">
+                        26 Jun, 02:30 pm
+                        <span class="end">6 {{'services' | translate}}</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

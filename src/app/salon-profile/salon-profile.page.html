@@ -1,0 +1,2354 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onScroll($event)">
+<!--<ion-content fullscreen>-->
+        <div class="banner" [class.active]="showToolbar">
+<!--    <div class="banner">-->
+        <div class="banner_inner">
+            <div class="profile_img">
+                <ion-slides pager="true" loop="true">
+                    <ion-slide>
+                        <div class="img_box center_img">
+                            <img src="assets/images/1_large.png" class="crop_img">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="img_box center_img">
+                            <img src="assets/images/1_large.png" class="crop_img">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="img_box center_img">
+                            <img src="assets/images/1_large.png" class="crop_img">
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="img_box center_img">
+                            <img src="assets/images/1_large.png" class="crop_img">
+                        </div>
+                    </ion-slide>
+                </ion-slides>
+
+                <div class="ratings d-flex">
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    &nbsp;4.5
+                </div>
+            </div>
+
+            <div class="text_box">
+                <h2>Restro Salons</h2>
+                <h4 class="d-flex">
+                    <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                    <span> Center Park, City Tower, New York</span>
+                </h4>
+                <div class="description">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry content of a page when .</p>
+                </div>
+
+                <ion-segment mode="ios" [(ngModel)]="tab" lines="none">
+                    <ion-segment-button mode="ios" value="services">
+                        <ion-label>
+                            {{'services' | translate}}
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button mode="ios" value="reviews">
+                        <ion-label>
+                            {{'reviews' | translate}}
+                        </ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="tab_content" [ngSwitch]="tab">
+
+
+        <div class="services d-flex" *ngSwitchCase="'services'">
+            <div class="service_category">
+                <ion-segment mode="ios" scrollable [(ngModel)]="services_tab" lines="none">
+                    <ion-segment-button mode="ios" value="All">
+                        <ion-label>
+                            <div class="img_box">
+                                <img src="assets/images/ic_all.png" class="before">
+                                <img src="assets/images/ic_allactive.png" class="after">
+                            </div>
+                            <h3>All</h3>
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button mode="ios" value="Face">
+                        <ion-label>
+                            <div class="img_box">
+                                <img src="assets/images/ic_face.png" class="before">
+                                <img src="assets/images/ic_faceactive.png" class="after">
+                            </div>
+                            <h3>Face</h3>
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button mode="ios" value="Hair">
+                        <ion-label>
+                            <div class="img_box">
+                                <img src="assets/images/ic_hair.png" class="before">
+                                <img src="assets/images/ic_hairactive.png" class="after">
+                            </div>
+                            <h3>Hair</h3>
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button mode="ios" value="Removal">
+                        <ion-label>
+                            <div class="img_box">
+                                <img src="assets/images/ic_removal.png" class="before">
+                                <img src="assets/images/ic_removalactive.png" class="after">
+                            </div>
+                            <h3>Removal</h3>
+                        </ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button mode="ios" value="Nail">
+                        <ion-label>
+                            <div class="img_box">
+                                <img src="assets/images/ic_nail.png" class="before">
+                                <img src="assets/images/ic_nailactive.png" class="after">
+                            </div>
+                            <h3> Nail</h3>
+                        </ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </div>
+
+            <!--services_tab start -->
+            <div style="width: 100%" class="" [ngSwitch]="services_tab">
+                <!--services all tab start -->
+                <div class="services_list end" *ngSwitchCase="'All'">
+                    <div class="service_list_inner">
+                        <h2>Face</h2>
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Fruit Facial
+                                <span class="end">$18
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Bridal Make up
+                                <span class="end">$40
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Face Bleach
+                                <span class="end">$20
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Cleanup & Glow
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Detanning
+                                <span class="end">$15
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Skin Light Masque
+                                <span class="end">$20
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+                    </div>
+
+
+                    <div class="service_list_inner">
+                        <h2>Hair</h2>
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Style My Hair
+                                <span class="end">$18
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Color My Hair
+                                <span class="end">$35
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Lesmo Hair Spa
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Hair extensions
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Highlights / lowlights
+                                <span class="end">$15
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Hair treatments
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+                    </div>
+
+                    <div class="service_list_inner">
+                        <h2>Removal</h2>
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Hair bleaching
+                                <span class="end">$18
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Laser
+                                <span class="end">$35
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Sugaring
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Waxing
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">General
+                                <span class="end">$15
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Electrolysis
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+                    </div>
+
+
+
+                    <div class="service_list_inner">
+                        <h2>Nail</h2>
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Acrylic
+                                <span class="end">$18
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Gel
+                                <span class="end">$35
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Manicure
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Pedicure
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">General
+                                <span class="end">$15
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+                    </div>
+                </div>
+                <!--services all tab end -->
+
+
+                <!--services face tab start -->
+                <div class="services_list end" *ngSwitchCase="'Face'">
+                    <div class="service_list_inner">
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Fruit Facial
+                                <span class="end">$18
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Bridal Make up
+                                <span class="end">$40
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Face Bleach
+                                <span class="end">$20
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Cleanup & Glow
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Detanning
+                                <span class="end">$15
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Skin Light Masque
+                                <span class="end">$20
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+                    </div>
+                </div>
+                <!--services face tab end -->
+
+
+                <!--services Hair tab start -->
+                <div class="services_list end" *ngSwitchCase="'Hair'">
+                    <div class="service_list_inner">
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Style My Hair
+                                <span class="end">$18
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Color My Hair
+                                <span class="end">$35
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Lesmo Hair Spa
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Hair extensions
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Highlights / lowlights
+                                <span class="end">$15
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Hair treatments
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+                    </div>
+                </div>
+                <!--services Hair tab end -->
+
+
+
+                <!--services Removal tab start -->
+                <div class="services_list end" *ngSwitchCase="'Removal'">
+                    <div class="service_list_inner">
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Hair bleaching
+                                <span class="end">$18
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Laser
+                                <span class="end">$35
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Sugaring
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Waxing
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">General
+                                <span class="end">$15
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Electrolysis
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+                    </div>
+                </div>
+                <!--services Removal tab end -->
+
+
+                <!--services Removal tab start -->
+                <div class="services_list end" *ngSwitchCase="'Nail'">
+                    <div class="service_list_inner">
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Acrylic
+                                <span class="end">$18
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>20 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Gel
+                                <span class="end">$35
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>45 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Manicure
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>25 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">Pedicure
+                                <span class="end">$20
+                                    <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>
+                                    <!--                                <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>-->
+                                </span>
+                            </h3>
+                            <h4>15 mins </h4>
+                        </div>
+
+                        <div class="service animate__animated animate__fadeInUp">
+                            <h3 class="d-flex">General
+                                <span class="end">$15
+                                    <!--                                <ion-icon class="zmdi zmdi-plus-circle-o ion-text-end"></ion-icon>-->
+                                    <ion-icon class="zmdi zmdi-check-circle ion-text-end"></ion-icon>
+                                </span>
+                            </h3>
+                            <h4>22 mins </h4>
+                        </div>
+                    </div>
+                </div>
+                <!--services Removal tab end -->
+            </div>
+            <!--services_tab end -->
+        </div>
+
+
+        <!--Reviews tab start -->
+        <div class="reviews" *ngSwitchCase="'reviews'">
+            <ion-list lines="none">
+                <div class="total_reviews d-flex">
+                    <h3 class="d-flex">
+                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h5 class="end">{{'total' | translate}} 1141 {{'reviews' | translate}}</h5>
+                </div>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/3.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Wonder Spot</h2>
+                                <h3 class="d-flex">
+                                    22 Jun, 11:40 am
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_2.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_1.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+
+                        </div>
+                    </div>
+                </ion-item>
+
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Opera City Salon</h2>
+                                <h3 class="d-flex">
+                                    26 Jun, 02:30 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <!--
+                <div class="scrollX">
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_2.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_1.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_3.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_4.png" class="crop_img">
+                    </div>
+                    <div class="img_box center_img">
+                        <img src="assets/images/reviews_5.png" class="crop_img">
+                    </div>
+                </div>
+-->
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <div class="item_header d-flex">
+                            <div class="img_box center_img">
+                                <img src="assets/images/6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>Ultra Unisex</h2>
+                                <h3 class="d-flex">
+                                    14 Jun, 10:22 pm
+                                    <span class="rating end">
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                            </p>
+                        </div>
+
+                        <div class="scrollX">
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_3.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_4.png" class="crop_img">
+                            </div>
+                            <div class="img_box center_img">
+                                <img src="assets/images/reviews_5.png" class="crop_img">
+                            </div>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+        <!--Reviews tab end -->
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp" *ngIf="tab == 'services'">
+    <div class="total d-flex">
+        <h2>$93.00 <small>&nbsp;{{'in_total' | translate}}.</small></h2>
+
+        <ion-button size="large" shape="round" class="box-shadow btn bg-gradient end animate__animated animate__zoomIn" (click)="book_appointment()">{{'continue' | translate}}</ion-button>
+    </div>
+</ion-footer>

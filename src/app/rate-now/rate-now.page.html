@@ -1,0 +1,71 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen>
+    <div class="banner">
+        <div class="profile_img center_img">
+            <img src="assets/images/1_large.png" class="crop_img">
+        </div>
+        <div class="text_box">
+            <h4>{{'how_was_your_experience_with' | translate}}</h4>
+            <h2>Retro Salons</h2>
+            <div class="give_rating">
+                <div class="icon_box">
+                    <span [ngClass]="ratingIcon1 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon1()">
+                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    </span>
+                    <span [ngClass]="ratingIcon2 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon2()">
+                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    </span>
+                    <span [ngClass]="ratingIcon3 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon3()">
+                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    </span>
+                    <span [ngClass]="ratingIcon4 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon4()">
+                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    </span>
+                    <span [ngClass]="ratingIcon5 ? 'icon_box active' : 'icon_box'" (click)="toggleRatingIcon5()">
+                        <ion-icon class="zmdi zmdi-star"></ion-icon>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item mode="md" lines="none">
+                <div class="item_inner d-flex">
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"enter_your_comment" | translate}}</ion-label>
+                        <ion-textarea mode="md" type="text" rows="3" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "></ion-textarea>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+
+    <div class="add_photos">
+        <h2>{{"add_photos_optional" | translate}}</h2>
+        <div class="scrollX">
+            <div class="img_box center_img">
+                <ion-icon class="zmdi zmdi-camera ion-text-center"></ion-icon>
+            </div>
+
+            <div class="img_box center_img">
+                <img src="assets/images/reviews_2.png" class="crop_img">
+            </div>
+        </div>
+    </div>
+</ion-content>
+
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" expand="full" class="btn">{{'submit' | translate}}</ion-button>
+</ion-footer>

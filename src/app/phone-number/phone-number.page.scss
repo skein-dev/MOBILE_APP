@@ -1,0 +1,100 @@
+.banner {
+    padding: 0 20px;
+    position: absolute;
+    top: 17%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+
+    .logo {
+        display: block;
+        width: 138px;
+        margin: auto;
+        margin-bottom: 80px;
+
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+
+    h2 {
+        margin: 0;
+        color: var(--text-black);
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+.animate__animated.animate__fadeInUp {
+    --animate-duration: .2s;
+}
+
+.animate__animated.animate__zoomInUp {
+    --animate-duration: .2s;
+}
+
+ion-footer {
+    .img_box {
+        width: 100%;
+        text-align: center;
+
+        img {
+            width: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .form {
+        background: var(--white);
+        overflow: visible !important;
+        padding: 0 15px!important;
+
+        ion-list {
+            ion-item {
+                margin: 0 !important;
+                border-bottom: none !important;
+                padding: 0px 0px !important;
+
+                h3 {
+                    margin: 0;
+                    font-size: 1.1rem;
+                    min-width: 27px;
+                    font-weight: 600;
+                }
+
+                .item_inner {
+                    &.d-flex {
+                        align-items: center !important;
+                    }
+                }
+
+                .button.btn {
+                    --border-radius: 50px;
+                    width: fit-content;
+                    height: 35px;
+                    font-size: .9rem;
+                    min-width: 108px;
+                    --padding-start: 10px;
+                    --padding-end: 10px;
+                    margin-top: 11px;
+                    margin-bottom: 11px;
+                    margin: 11px 5px !important;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-height:680px) {
+    .banner {
+        top: 13%;
+
+        .logo {
+            margin-bottom: 30px;
+        }
+    }
+}

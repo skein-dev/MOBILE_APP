@@ -1,0 +1,1071 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'all_services' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <div class="map">
+        <img src="assets/images/map.png">
+        <ion-button size="large" shape="round" class="box-shadow btn bg-gradient" (click)="map_view()">{{'view_in_map' | translate}}</ion-button>
+        <h2 class="d-flex">129 {{'salons_found' | translate}}</h2>
+    </div>
+    <ion-list lines="none">
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Restro Salons</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Center Park, City Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Ultra Unisex</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Operum Tower, Lisadona house, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.0
+                    </h3>
+                    <h2>Peter Parlor</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Opera City Salon</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>City Central Park, Riher Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Wonder Spot</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Nestolia House, Geroge Towerm New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;3.5
+                    </h3>
+                    <h2>Beauty Spa</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Restro Salons</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Center Park, City Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Ultra Unisex</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Operum Tower, Lisadona house, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.0
+                    </h3>
+                    <h2>Peter Parlor</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Opera City Salon</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>City Central Park, Riher Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Wonder Spot</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Nestolia House, Geroge Towerm New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;3.5
+                    </h3>
+                    <h2>Beauty Spa</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Restro Salons</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Center Park, City Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Ultra Unisex</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Operum Tower, Lisadona house, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.0
+                    </h3>
+                    <h2>Peter Parlor</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Opera City Salon</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>City Central Park, Riher Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Wonder Spot</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Nestolia House, Geroge Towerm New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;3.5
+                    </h3>
+                    <h2>Beauty Spa</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Restro Salons</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Center Park, City Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Ultra Unisex</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Operum Tower, Lisadona house, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.0
+                    </h3>
+                    <h2>Peter Parlor</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Opera City Salon</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>City Central Park, Riher Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Wonder Spot</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Nestolia House, Geroge Towerm New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;3.5
+                    </h3>
+                    <h2>Beauty Spa</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Restro Salons</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Center Park, City Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Ultra Unisex</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Operum Tower, Lisadona house, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.0
+                    </h3>
+                    <h2>Peter Parlor</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Opera City Salon</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>City Central Park, Riher Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Wonder Spot</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Nestolia House, Geroge Towerm New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;3.5
+                    </h3>
+                    <h2>Beauty Spa</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Restro Salons</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Center Park, City Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Ultra Unisex</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        Operum Tower, Lisadona house, New York
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.0
+                    </h3>
+                    <h2>Peter Parlor</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Opera City Salon</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>City Central Park, Riher Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Wonder Spot</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Nestolia House, Geroge Towerm New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;3.5
+                    </h3>
+                    <h2>Beauty Spa</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/1.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Restro Salons</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Center Park, City Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/6.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Ultra Unisex</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span> Operum Tower, Lisadona house, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/2.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.0
+                    </h3>
+                    <h2>Peter Parlor</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/4.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;4.5
+                    </h3>
+                    <h2>Opera City Salon</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>City Central Park, Riher Tower, New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/3.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;5.0
+                    </h3>
+                    <h2>Wonder Spot</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Nestolia House, Geroge Towerm New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp " (click)="salon_profile()">
+            <div class="item_inner d-flex">
+                <div class="img_box center_img">
+                    <img src="assets/images/5.png" class="crop_img">
+                </div>
+                <div class="text_box">
+                    <h3 class="d-flex">
+                        <span class="rating">
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star active"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                            <ion-icon class="zmdi zmdi-star"></ion-icon>
+                        </span>
+                        &nbsp;&nbsp;3.5
+                    </h3>
+                    <h2>Beauty Spa</h2>
+                    <h4 class="d-flex">
+                        <ion-icon class="zmdi zmdi-pin ion-text-start"></ion-icon>
+                        <span>Welingtone street, Apple Graden New York</span>
+                    </h4>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

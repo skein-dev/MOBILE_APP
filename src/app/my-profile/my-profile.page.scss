@@ -1,0 +1,91 @@
+.banner {
+    width: 100%;
+
+    .profile_img {
+        width: 100%;
+        height: 390px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 100%;
+            height: 180px;
+            z-index: 99;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 82%);
+        }
+
+        h2 {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+            color: var(--primary);
+            padding: 6px 20px;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin: 0;
+
+            ion-icon {
+                display: block;
+                font-size: 1.4rem;
+                min-width: 38px;
+            }
+        }
+    }
+}
+
+.form {
+    padding-top: 34px;
+
+    ion-list {
+        ion-item {
+            .input_box {
+                border-bottom: none !important;
+
+                ion-input {
+                    font-size: 1rem !important;
+                }
+            }
+
+        }
+    }
+}
+
+.animate__animated.animate__fadeInUp {
+    &:nth-child(1) {
+        --animate-duration: .15s;
+    }
+
+    &:nth-child(2) {
+        --animate-duration: .2s;
+    }
+
+    &:nth-child(3) {
+        --animate-duration: .25s;
+    }
+
+    &:nth-child(4) {
+        --animate-duration: .3s;
+    }
+
+    &:nth-child(5) {
+        --animate-duration: .35s;
+    }
+
+    &:nth-child(6) {
+        --animate-duration: .4s;
+    }
+
+    &:nth-child(7) {
+        --animate-duration: .45s;
+    }
+
+    &:nth-child(8) {
+        --animate-duration: .5s;
+    }
+
+}

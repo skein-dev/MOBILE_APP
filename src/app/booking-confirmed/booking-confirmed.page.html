@@ -1,0 +1,21 @@
+<!--
+<ion-header>
+  <ion-toolbar>
+    <ion-title>booking-confirmed</ion-title>
+  </ion-toolbar>
+</ion-header>
+-->
+
+<ion-content fullscreen>
+    <ion-card class="ion-text-center animate__animated animate__zoomIn">
+        <div class="img_box">
+            <img src="assets/images/booked.png">
+        </div>
+        <div class="text_box">
+            <h3>{{'you_ve_added_your' | translate}} <br>{{'appointment_on' | translate}}</h3>
+            <h2>April 16, 2020, Monday <br> 12:00 PM</h2>
+            <h3>{{'payment_has_been_done' | translate}} <br>{{'via_wallet' | translate}}</h3>
+        </div>
+        <ion-button size="large" expand="full" class="btn bg-gradient" (click)="tabs()">{{'done' | translate}}</ion-button>
+    </ion-card>
+</ion-content>

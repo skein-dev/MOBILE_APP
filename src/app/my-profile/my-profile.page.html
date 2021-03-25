@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            {{'my_profile' | translate}}
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="banner">
+        <div class="profile_img center_img">
+            <img src="assets/images/my_profile.png" class="crop_img">
+
+            <h2 class="d-flex">
+                <ion-icon class="zmdi zmdi-camera ion-text-start"></ion-icon>
+                {{'change_photo' | translate}}
+
+                <ion-icon class="zmdi zmdi-delete ion-text-end end"></ion-icon>
+            </h2>
+        </div>
+    </div>
+
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start">
+                        <ion-icon class="zmdi zmdi-account"></ion-icon>
+                    </div>
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"full_name" | translate}}</ion-label>
+                        <ion-input mode="md" type="name" placeholder="" value="Samantha Smith" readonly="boolean"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start">
+                        <ion-icon class="zmdi zmdi-email"></ion-icon>
+                    </div>
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"email_address" | translate}}</ion-label>
+                        <ion-input mode="md" type="email" placeholder="" value="samanthasmith@mail.com" readonly="boolean"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                <div class="item_inner d-flex">
+                    <div class="icon_box ion-text-start">
+                        <ion-icon class="zmdi zmdi-smartphone-android"></ion-icon>
+                    </div>
+                    <div class="input_box">
+                        <ion-label mode="md" position="stacked">{{"phone_number" | translate}}</ion-label>
+                        <ion-input mode="md" type="text" placeholder="" value="+1 987 654 3210" readonly="boolean"></ion-input>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header class="bg_transparent">
+    <ion-toolbar>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content  fullscreen>
+    <div class="banner animate__animated animate__zoomInUp">
+        <div class="logo ion-text-center">
+            <img src="assets/images/logo.png"> 
+        </div>
+        <h2 class="ion-text-center">{{'let_make_you' | translate}}<br>{{'more_beautiful' | translate}}.</h2>
+    </div>
+</ion-content>
+
+<ion-footer class="ion-no-border animate__animated animate__fadeInUp">
+    <div class="footer_banner">
+        <div class="img_box">
+            <img src="assets/images/login_image.png"> 
+        </div>
+    </div>
+    <div class="form">
+        <ion-list lines="none">
+            <ion-item lines="none">
+                <div class="item_inner d-flex">
+                    <h3>+1</h3>
+                    <ion-input mode="md" type="number" placeholder="{{'enter_mobile_number' | translate}}"></ion-input>
+                    <ion-button size="large" class="box-shadow btn bg-gradient end" (click)="register()">{{'continue' | translate}}</ion-button>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-footer>
